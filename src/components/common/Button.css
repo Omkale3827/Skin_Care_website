@@ -1,0 +1,152 @@
+.luxe-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: all 0.24s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+  gap: 10px;
+  border-radius: 2px;
+}
+
+/* Sizing */
+.luxe-btn--sm {
+  font-size: 0.72rem;
+  padding: 8px 18px;
+  height: 38px;
+}
+
+.luxe-btn--md {
+  font-size: 0.78rem;
+  padding: 12px 28px;
+  height: 48px;
+}
+
+.luxe-btn--lg {
+  font-size: 0.84rem;
+  padding: 16px 36px;
+  height: 54px;
+}
+
+.luxe-btn--full {
+  width: 100%;
+}
+
+/* Variants */
+/* Primary: Dark charcoal */
+.luxe-btn--primary {
+  background: var(--bg-dark);
+  color: var(--text-white);
+  border: 1px solid var(--bg-dark);
+}
+
+.luxe-btn--primary:hover {
+  background: #332B28;
+  border-color: #332B28;
+  transform: translateY(-1px);
+}
+
+.luxe-btn--primary:active {
+  transform: translateY(0);
+}
+
+/* White: Solid crisp white (as seen in Hero SHOP NOW) */
+.luxe-btn--white {
+  background: #FFFFFF;
+  color: #1C1B1A;
+  border: 1px solid #FFFFFF;
+}
+
+.luxe-btn--white:hover {
+  background: #F4ECE7;
+  border-color: #F4ECE7;
+  transform: translateY(-1px);
+}
+
+/* Secondary / Rose: Dusty blush rose button */
+.luxe-btn--secondary,
+.luxe-btn--rose {
+  background: #E8CEC7;
+  color: #1C1B1A;
+  border: 1px solid rgba(220, 190, 182, 0.6);
+}
+
+.luxe-btn--secondary:hover,
+.luxe-btn--rose:hover {
+  background: #DFAFA4;
+  transform: translateY(-1px);
+}
+
+/* Outline */
+.luxe-btn--outline {
+  background: transparent;
+  color: #1C1B1A;
+  border: 1px solid #1C1B1A;
+}
+
+.luxe-btn--outline:hover {
+  background: #1C1B1A;
+  color: #FFFFFF;
+  transform: translateY(-1px);
+}
+
+.luxe-btn--outline-white {
+  background: transparent;
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.luxe-btn--outline-white:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: #FFFFFF;
+}
+
+/* Text Underline / Ghost */
+.luxe-btn--underline {
+  background: transparent;
+  color: #FFFFFF;
+  border: none;
+  border-bottom: 2px solid #FFFFFF;
+  border-radius: 0;
+  padding: 8px 6px;
+  height: auto;
+}
+
+.luxe-btn--underline:hover {
+  color: #F5EAE4;
+  border-bottom-color: #F5EAE4;
+  transform: translateY(-1px);
+}
+
+.luxe-btn--ghost {
+  background: transparent;
+  color: var(--text-primary);
+  border: none;
+}
+
+.luxe-btn--ghost:hover {
+  color: var(--rose-dark);
+}
+
+.luxe-btn--disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.luxe-btn__icon {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.luxe-btn:hover .luxe-btn__icon {
+  transform: translateX(3px);
+}

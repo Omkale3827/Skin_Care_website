@@ -1,0 +1,191 @@
+/* ==========================================================================
+   ÉLANE SHARED PAGE STYLES & LAYOUTS
+   Unified Warm Ivory, Soft Nude & Deep Charcoal Design System
+   ========================================================================== */
+
+/* Shared Page Layouts & Headers */
+.page-hero {
+  text-align: center;
+  padding: 44px 0 36px;
+  position: relative;
+}
+
+.page-hero__tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.74rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--rose-tag);
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.page-hero__title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.4rem, 4.2vw, 3.4rem);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+  color: var(--text-primary);
+  margin-bottom: 14px;
+}
+
+.page-hero__desc {
+  max-width: 620px;
+  margin: 0 auto;
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+/* Breadcrumbs */
+.luxe-breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
+
+.luxe-breadcrumbs a {
+  color: var(--text-secondary);
+  transition: color var(--transition-fast);
+}
+
+.luxe-breadcrumbs a:hover {
+  color: var(--rose-dark);
+}
+
+.luxe-breadcrumbs span.current {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* Grids */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 28px;
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+/* Empty State Card */
+.empty-state {
+  text-align: center;
+  padding: 64px 24px;
+  background: var(--bg-surface);
+  border: 1px dashed rgba(220, 190, 182, 0.8);
+  border-radius: var(--radius-md);
+  max-width: 540px;
+  margin: 32px auto;
+  box-shadow: var(--shadow-sm);
+}
+
+.empty-state__icon {
+  color: var(--rose-primary);
+  margin-bottom: 16px;
+  opacity: 0.85;
+}
+
+.empty-state__title {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.empty-state__desc {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+/* Luxury Forms (Auth, Skin Test, etc.) */
+.luxe-auth-card {
+  max-width: 460px;
+  margin: 20px auto 60px;
+  padding: 44px 38px;
+  background: var(--bg-surface);
+  border: 1px solid rgba(220, 190, 182, 0.6);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+}
+
+.luxe-auth-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.luxe-auth-title {
+  font-family: var(--font-serif);
+  font-size: 2.1rem;
+  font-weight: 400;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.luxe-auth-sub {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+}
+
+.luxe-form-group {
+  margin-bottom: 20px;
+}
+
+.luxe-label {
+  display: block;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.luxe-input {
+  width: 100%;
+  padding: 13px 18px;
+  background: #F7EFEA;
+  border: 1px solid rgba(220, 190, 182, 0.6);
+  border-radius: var(--radius-xs);
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: 0.92rem;
+  transition: all var(--transition-fast);
+  outline: none;
+}
+
+.luxe-input:focus {
+  border-color: #1C1B1A;
+  background: #FFFFFF;
+  box-shadow: 0 0 0 2px rgba(28, 27, 26, 0.08);
+}
+
+.luxe-auth-footer {
+  text-align: center;
+  margin-top: 26px;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.luxe-auth-footer a {
+  color: var(--text-primary);
+  font-weight: 600;
+  text-decoration: underline;
+  margin-left: 6px;
+}
+
+.luxe-auth-footer a:hover {
+  color: var(--rose-dark);
+}

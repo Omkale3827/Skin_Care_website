@@ -1,0 +1,329 @@
+.account-layout {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 36px;
+  align-items: start;
+}
+
+.account-sidebar {
+  padding: 32px 24px;
+  background: var(--bg-surface);
+  border: 1px solid rgba(28, 27, 26, 0.08);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+}
+
+.account-avatar-wrap {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.account-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #E8CEC7;
+  color: #1C1B1A;
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.account-user-meta {
+  overflow: hidden;
+}
+
+.account-user-name {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.account-user-email {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  word-break: break-all;
+}
+
+.account-tier-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  background: #F7EFEA;
+  border: 1px solid rgba(220, 190, 182, 0.6);
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  color: var(--rose-tag);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.account-stats-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 14px;
+  background: #F7EFEA;
+  border: 1px solid rgba(220, 190, 182, 0.5);
+  border-radius: var(--radius-sm);
+  margin-bottom: 24px;
+}
+
+.account-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.account-stat-val {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1C1B1A;
+}
+
+.account-stat-lbl {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.account-stat-divider {
+  width: 1px;
+  height: 28px;
+  background: rgba(28, 27, 26, 0.08);
+}
+
+.account-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.account-nav-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-radius: var(--radius-xs);
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  transition: all var(--transition-fast);
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.account-nav-btn:hover {
+  background: #F7EFEA;
+  color: #1C1B1A;
+}
+
+.account-nav-btn.active {
+  background: #1C1B1A;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+.account-sidebar-footer {
+  padding-top: 16px;
+  border-top: 1px solid rgba(28, 27, 26, 0.08);
+}
+
+.account-logout-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #B91C1C;
+  font-size: 0.84rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.account-logout-btn:hover {
+  opacity: 0.8;
+}
+
+/* Panel */
+.account-panel {
+  padding: 36px;
+  background: var(--bg-surface);
+  border: 1px solid rgba(28, 27, 26, 0.08);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+}
+
+.account-panel-title {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.account-panel-sub {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin-bottom: 28px;
+}
+
+/* Orders */
+.account-orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.account-order-card {
+  padding: 20px;
+  background: #F7EFEA;
+  border: 1px solid rgba(220, 190, 182, 0.5);
+  border-radius: var(--radius-sm);
+}
+
+.account-order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 14px;
+}
+
+.account-order-id {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  color: var(--text-primary);
+  display: block;
+}
+
+.account-order-date {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.account-order-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  color: #2D6A4F;
+  font-weight: 600;
+}
+
+.account-order-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.account-order-pill {
+  font-size: 0.78rem;
+  padding: 4px 10px;
+  background: #FFFFFF;
+  border: 1px solid rgba(220, 190, 182, 0.5);
+  border-radius: 9999px;
+  color: var(--text-secondary);
+}
+
+.account-order-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 12px;
+  border-top: 1px solid rgba(28, 27, 26, 0.08);
+}
+
+.account-order-courier {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.account-order-total {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1C1B1A;
+}
+
+/* Diagnostic Card */
+.account-diagnostic-card {
+  padding: 24px;
+  background: #F2E5DF;
+  border: 1px solid rgba(220, 190, 182, 0.6);
+  border-radius: var(--radius-sm);
+}
+
+.account-diagnostic-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  color: var(--rose-tag);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.account-diagnostic-title {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.account-diagnostic-details {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* Address Card */
+.account-address-card {
+  padding: 24px;
+  background: #F7EFEA;
+  border: 1px solid rgba(220, 190, 182, 0.5);
+  border-radius: var(--radius-sm);
+  max-width: 440px;
+}
+
+.account-address-default {
+  display: inline-block;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--rose-tag);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.account-address-name {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.account-address-lines {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .account-layout {
+    grid-template-columns: 1fr;
+  }
+}

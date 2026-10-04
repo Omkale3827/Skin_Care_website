@@ -1,0 +1,9 @@
+.lumiere-app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.lumiere-main {
+  flex-grow: 1;
+}

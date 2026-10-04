@@ -1,0 +1,449 @@
+/* ==========================================================================
+   ÉLANE HOME PAGE STYLES
+   Visual design matched to reference screenshots 1, 2, and 3
+   ========================================================================== */
+
+.home-page {
+  width: 100%;
+  overflow-x: hidden;
+  background-color: var(--bg-primary);
+}
+
+/* ==========================================================================
+   1. HERO SECTION (Reference Screenshot 1)
+   Full-width hero banner with glowing model, "Softness, reimagined.", 
+   supporting copy, and dual CTA buttons (SHOP NOW & EXPLORE).
+   ========================================================================== */
+.home-hero {
+  position: relative;
+  width: 100%;
+  min-height: 600px;
+  height: calc(100vh - 110px);
+  max-height: 820px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-color: #1A1615;
+}
+
+.home-hero__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.home-hero__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center right;
+  display: block;
+}
+
+.home-hero__gradient-overlay {
+  position: absolute;
+  inset: 0;
+  /* Dark warm gradient on the left for crisp typography contrast */
+  background: linear-gradient(
+    90deg,
+    rgba(18, 14, 13, 0.82) 0%,
+    rgba(18, 14, 13, 0.55) 42%,
+    rgba(18, 14, 13, 0.15) 70%,
+    rgba(18, 14, 13, 0) 100%
+  );
+  pointer-events: none;
+}
+
+.home-hero__container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.home-hero__copy {
+  max-width: 560px;
+  padding: 40px 0;
+}
+
+.home-hero__tagline {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.74rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #EDE4DC;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.home-hero__title {
+  font-family: var(--font-serif);
+  font-size: clamp(3rem, 5.6vw, 5.2rem);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  color: #FFFFFF;
+  margin-bottom: 24px;
+}
+
+.home-hero__desc {
+  font-family: var(--font-sans);
+  font-size: clamp(0.95rem, 1.4vw, 1.08rem);
+  color: #F1EAE5;
+  line-height: 1.65;
+  margin-bottom: 36px;
+  font-weight: 300;
+  max-width: 480px;
+}
+
+.home-hero__cta-group {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+/* ==========================================================================
+   2. CATEGORY GRID SECTION (Reference Screenshot 2)
+   "Shop by category" in classic serif, 6-column category cards row
+   ========================================================================== */
+.home-categories-section {
+  padding: 90px 0 70px;
+  background-color: var(--bg-primary);
+}
+
+.home-categories__header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.home-categories__title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.4rem, 4.2vw, 3.4rem);
+  font-weight: 400;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.home-categories__grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 22px;
+}
+
+/* ==========================================================================
+   3. BESTSELLERS SECTION (Bottom of Reference Screenshot 2)
+   "THE ONES YOU LOVE", "Bestsellers", 4-product grid
+   ========================================================================== */
+.home-bestsellers-section {
+  padding: 60px 0 90px;
+  background-color: var(--bg-primary);
+}
+
+.home-bestsellers__header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.home-bestsellers__header .section-tagline {
+  margin-bottom: 8px;
+}
+
+.home-bestsellers__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+.home-bestsellers__footer-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 48px;
+}
+
+/* ==========================================================================
+   4. FEATURE / STORY SPOTLIGHT (Reference Screenshot 3)
+   Two-column split: Left model with serum, Right soft blush background,
+   "BEAUTY WITH INTENTION", "You, only more luminous.", "DISCOVER OUR STORY →"
+   ========================================================================== */
+.home-story-section {
+  width: 100%;
+  background-color: var(--bg-blush);
+  overflow: hidden;
+}
+
+.home-story-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  min-height: 580px;
+}
+
+.home-story-split__media {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 480px;
+  overflow: hidden;
+  background-color: #E6D2C9;
+}
+
+.home-story-split__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.home-story-split__sparkle {
+  position: absolute;
+  bottom: 32px;
+  right: 32px;
+  color: #FFFFFF;
+  opacity: 0.9;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.15));
+  animation: elaneSparkleFloat 4s ease-in-out infinite;
+}
+
+@keyframes elaneSparkleFloat {
+  0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.85; }
+  50% { transform: scale(1.15) rotate(10deg); opacity: 1; }
+}
+
+.home-story-split__content {
+  background-color: var(--bg-blush);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 70px 80px;
+  box-sizing: border-box;
+}
+
+.home-story-split__inner {
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-story-split__sub {
+  font-family: var(--font-sans);
+  font-size: 0.76rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--rose-tag);
+  font-weight: 600;
+  margin-bottom: 22px;
+  display: block;
+}
+
+.home-story-split__title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.4rem, 4.2vw, 3.8rem);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+  margin-bottom: 24px;
+}
+
+.home-story-split__body {
+  font-family: var(--font-sans);
+  font-size: 1.02rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 38px;
+  font-weight: 400;
+}
+
+.home-story-split__action {
+  display: flex;
+  align-items: center;
+}
+
+/* ==========================================================================
+   5. AI SKIN DIAGNOSTIC RITUAL TEASER
+   ========================================================================== */
+.home-diagnostic-section {
+  padding: 90px 0;
+  background-color: var(--bg-primary);
+}
+
+.home-diagnostic-card {
+  background: var(--bg-nude);
+  border-radius: var(--radius-lg);
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: center;
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+}
+
+.home-diagnostic-card__copy {
+  padding: 60px 54px;
+}
+
+.home-diagnostic-card__title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 400;
+  line-height: 1.25;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+.home-diagnostic-card__desc {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin-bottom: 28px;
+  max-width: 520px;
+}
+
+.home-diagnostic-card__media {
+  height: 100%;
+  min-height: 360px;
+}
+
+.home-diagnostic-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ==========================================================================
+   6. BRAND PILLARS / VALUES
+   ========================================================================== */
+.home-pillars-section {
+  padding: 70px 0 90px;
+  border-top: 1px solid var(--border-subtle);
+  background-color: var(--bg-primary);
+}
+
+.home-pillars__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.home-pillar-item {
+  padding: 32px 28px;
+  background: var(--bg-surface);
+  border: 1px solid rgba(28, 27, 26, 0.08);
+  border-radius: var(--radius-sm);
+  transition: var(--transition-smooth);
+}
+
+.home-pillar-item:hover {
+  border-color: rgba(212, 157, 146, 0.6);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-sm);
+}
+
+.home-pillar-item__tag {
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--rose-tag);
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.home-pillar-item__title {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+}
+
+.home-pillar-item__desc {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   RESPONSIVE BREAKPOINTS
+   ========================================================================== */
+@media (max-width: 1200px) {
+  .home-categories__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .home-bestsellers__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .home-story-split__content {
+    padding: 50px 48px;
+  }
+}
+
+@media (max-width: 900px) {
+  .home-hero {
+    min-height: 520px;
+    height: auto;
+    padding: 60px 0;
+  }
+
+  .home-hero__copy {
+    max-width: 100%;
+  }
+
+  .home-hero__desc br {
+    display: none;
+  }
+
+  .home-story-split {
+    grid-template-columns: 1fr;
+  }
+
+  .home-story-split__media {
+    min-height: 380px;
+    height: 380px;
+  }
+
+  .home-story-split__content {
+    padding: 48px 24px;
+  }
+
+  .home-diagnostic-card {
+    grid-template-columns: 1fr;
+  }
+
+  .home-diagnostic-card__media {
+    height: 260px;
+    min-height: 260px;
+  }
+
+  .home-diagnostic-card__copy {
+    padding: 40px 24px;
+  }
+
+  .home-pillars__grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .home-categories__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .home-bestsellers__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-hero__title {
+    font-size: 2.7rem;
+  }
+}

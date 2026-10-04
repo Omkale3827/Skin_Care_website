@@ -1,0 +1,198 @@
+:root {
+  /* ÉLANE Warm Luxury Design System */
+  /* Backgrounds */
+  --bg-primary: #FBF9F6;           /* Clean warm ivory / off-white */
+  --bg-surface: #FFFFFF;           /* Pure crisp card surface */
+  --bg-nude: #F2E5DF;              /* Split muted-nude / blush-beige section */
+  --bg-nude-light: #F7EFEA;        /* Delicate warm nude tint */
+  --bg-blush: #EEDFD8;             /* Soft blush block (story section) */
+  --bg-dark: #1C1B1A;              /* Deep charcoal / soft black */
+  --bg-pill: linear-gradient(90deg, #F7DED7 0%, #ECD0C7 46%, #E1BDB4 100%);
+
+  /* Text & Contrast */
+  --text-primary: #1C1B1A;         /* Deep charcoal / soft black for high contrast */
+  --text-secondary: #4A433F;       /* Warm espresso charcoal for body copy */
+  --text-muted: #82756E;           /* Muted warm grey for captions & secondary info */
+  --text-light: #FBF9F6;           /* Warm ivory on dark backgrounds */
+  --text-white: #FFFFFF;           /* Pure white */
+
+  /* Dusty Blush Rose & Petal Accents */
+  --rose-primary: #D49D92;         /* Dusty rose primary */
+  --rose-dark: #A66B5E;            /* Deep rose terracotta */
+  --rose-light: #F0D3CC;           /* Soft petal pink */
+  --rose-subtle: #FAF0EC;          /* Whisper rose */
+  --rose-tag: #9C695E;             /* Editorial label rose */
+
+  /* Gold & Warm Highlights */
+  --gold-accent: #C89D52;
+  --gold-subtle: rgba(200, 157, 82, 0.12);
+
+  /* Borders & Dividers */
+  --border-subtle: rgba(220, 190, 182, 0.4);
+  --border-light: rgba(28, 27, 26, 0.08);
+  --border-dark: #1C1B1A;
+  --border-active: #A66B5E;
+
+  /* Shadows (Minimal, Elegant, High-Fashion) */
+  --shadow-sm: 0 2px 8px rgba(70, 40, 35, 0.04);
+  --shadow-md: 0 8px 24px -4px rgba(70, 40, 35, 0.07), 0 2px 6px rgba(0, 0, 0, 0.02);
+  --shadow-lg: 0 16px 40px -8px rgba(70, 40, 35, 0.1), 0 4px 12px rgba(0, 0, 0, 0.03);
+  --shadow-pill: 0 8px 30px -4px rgba(75, 35, 30, 0.08), 0 2px 6px -1px rgba(0, 0, 0, 0.03);
+
+  /* Typography */
+  --font-serif: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+  --font-display: 'Italiana', 'Cormorant Garamond', serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Layout & Radii */
+  --max-width: 1400px;
+  --transition-fast: 0.18s ease;
+  --transition-smooth: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-pill: 9999px;
+  --radius-full: 9999px;
+}
+
+/* Reset & Base */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: var(--font-sans);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Layout Utilities */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.page-wrapper {
+  min-height: 75vh;
+  padding-top: 24px;
+  padding-bottom: 80px;
+}
+
+/* Typography Helpers */
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+.section-tagline {
+  font-family: var(--font-sans);
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--rose-tag);
+  font-weight: 600;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.section-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+.section-desc {
+  font-size: 0.96rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  max-width: 620px;
+}
+
+/* Card utility */
+.luxe-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-smooth);
+}
+
+.luxe-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: rgba(212, 157, 146, 0.6);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F3EAE5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D4BDB4;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B69E94;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

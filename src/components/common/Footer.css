@@ -1,0 +1,244 @@
+/* ==========================================================================
+   ÉLANE FOOTER SYSTEM
+   Deep charcoal background, warm ivory typography, dusty rose accents
+   ========================================================================== */
+
+.elane-footer {
+  background-color: #181514;
+  color: #EDE4DC;
+  margin-top: auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Perks banner */
+.elane-perks {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 34px 0;
+  background: rgba(25, 21, 20, 0.6);
+}
+
+.elane-perks__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+.elane-perk-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.elane-perk-icon {
+  color: #E8CEC7;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.elane-perk-title {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  letter-spacing: 0.04em;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+
+.elane-perk-desc {
+  font-size: 0.78rem;
+  color: #A89C94;
+  line-height: 1.45;
+}
+
+/* Main Footer */
+.elane-footer__main {
+  padding: 68px 0 54px;
+}
+
+.elane-footer__grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 52px;
+}
+
+.elane-footer__brand-col {
+  max-width: 380px;
+}
+
+.elane-footer__logo {
+  font-family: 'Italiana', 'Cormorant Garamond', Georgia, serif;
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  color: #FFFFFF;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 14px;
+}
+
+.elane-footer__tagline {
+  font-size: 0.88rem;
+  color: #B5A8A0;
+  line-height: 1.65;
+  margin-bottom: 28px;
+}
+
+/* Newsletter Form */
+.elane-newsletter-label {
+  display: block;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #E8CEC7;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.elane-newsletter-row {
+  display: flex;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 9999px;
+  padding: 4px 6px 4px 18px;
+  transition: border-color 0.2s ease;
+}
+
+.elane-newsletter-row:focus-within {
+  border-color: #E8CEC7;
+  background: rgba(255, 255, 255, 0.09);
+}
+
+.elane-newsletter-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #FFFFFF;
+  font-size: 0.84rem;
+  font-family: var(--font-sans);
+}
+
+.elane-newsletter-input::placeholder {
+  color: #7D7068;
+}
+
+.elane-newsletter-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #E8CEC7;
+  color: #181514;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.elane-newsletter-btn:hover {
+  background: #FFFFFF;
+  transform: scale(1.05);
+}
+
+.elane-newsletter-success {
+  display: block;
+  font-size: 0.78rem;
+  color: #D49D92;
+  margin-top: 10px;
+}
+
+/* Links Columns */
+.elane-footer__heading {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+  letter-spacing: -0.01em;
+}
+
+.elane-footer__links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.elane-footer__links a {
+  font-size: 0.84rem;
+  color: #A89C94;
+  text-decoration: none;
+  transition: color 0.18s ease;
+}
+
+.elane-footer__links a:hover {
+  color: #E8CEC7;
+}
+
+/* Bottom Bar */
+.elane-footer__bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 22px 0;
+}
+
+.elane-footer__bottom-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.elane-footer__copy {
+  font-size: 0.74rem;
+  color: #7D7068;
+  letter-spacing: 0.05em;
+}
+
+.elane-footer__legal {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.74rem;
+  color: #7D7068;
+}
+
+.elane-footer__legal a {
+  color: #7D7068;
+  text-decoration: none;
+  transition: color 0.18s ease;
+}
+
+.elane-footer__legal a:hover {
+  color: #E8CEC7;
+}
+
+@media (max-width: 960px) {
+  .elane-perks__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .elane-footer__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+  }
+  .elane-footer__brand-col {
+    grid-column: span 2;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .elane-perks__grid {
+    grid-template-columns: 1fr;
+  }
+  .elane-footer__grid {
+    grid-template-columns: 1fr;
+  }
+  .elane-footer__brand-col {
+    grid-column: span 1;
+  }
+}

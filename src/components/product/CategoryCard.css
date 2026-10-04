@@ -1,0 +1,61 @@
+.elane-category-item {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.elane-category-item__media {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: #F2E5DF;
+  position: relative;
+}
+
+.elane-category-item__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.elane-category-item:hover .elane-category-item__img {
+  transform: scale(1.05);
+}
+
+.elane-category-item__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 2px 8px;
+  border-bottom: 1px solid rgba(28, 27, 26, 0.16);
+  transition: border-color 0.25s ease;
+}
+
+.elane-category-item:hover .elane-category-item__footer {
+  border-bottom-color: #1C1B1A;
+}
+
+.elane-category-item__title {
+  font-family: var(--font-serif);
+  font-size: 1.18rem;
+  color: #1C1B1A;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  transition: color 0.2s ease;
+}
+
+.elane-category-item__arrow {
+  color: #1C1B1A;
+  display: flex;
+  align-items: center;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.elane-category-item:hover .elane-category-item__arrow {
+  transform: translateX(5px);
+}
